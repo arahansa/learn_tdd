@@ -17,7 +17,6 @@ public class FirstTest {
         assertEquals(10, product.amount);
         product = five.times(3);
         assertEquals(15, product.amount);
-
     }
 
 }
