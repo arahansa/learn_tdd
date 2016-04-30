@@ -5,8 +5,25 @@ package tdd.domain;
  */
 public abstract class Money {
     protected int amount;
+    protected String currency;
 
-    abstract public Money times(int multiplier);
+    public abstract Money times(int multiplier);
+
+    public Money(int amount, String currency){
+        this.amount = amount;
+        this.currency = currency;
+    }
+
+    public String currency() {
+        return currency;
+    }
+
+    public static Dollor dollor(int amount) {
+        return new Dollor(amount, "USD");
+    }
+    public static Franc franc(int amount) {
+        return new Franc(amount, "CFH");
+    }
 
     @Override
     public boolean equals(Object object){
@@ -15,10 +32,4 @@ public abstract class Money {
                 && getClass().equals(money.getClass());
     }
 
-    public static Dollor dollor(int amount) {
-        return new Dollor(amount);
-    }
-    public static Franc franc(int amount) {
-        return new Franc(amount);
-    }
 }

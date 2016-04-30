@@ -5,13 +5,12 @@ package tdd.domain;
  */
 public class Dollor extends Money{
 
-
-    public Dollor(int amount){
-        this.amount = amount;
+    public Dollor(int amount, String currency){
+        super(amount, currency);
     }
 
     public Dollor times(int multiplier){
-        return new Dollor(amount * multiplier);
+        return Money.dollor(amount * multiplier);
     }
 
 
