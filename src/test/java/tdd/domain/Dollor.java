@@ -16,7 +16,8 @@ public class Dollor {
 
     @Override
     public boolean equals(Object object){
-        return true;
+        Dollor dollor = (Dollor) object;
+        return amount == dollor.amount;
     }
 
 }

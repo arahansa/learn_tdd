@@ -4,6 +4,7 @@ import tdd.domain.Dollor;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 
 /**
@@ -23,6 +24,7 @@ public class FirstTest {
     @Test
     public void testEquality() throws Exception{
         assertTrue(new Dollor(5).equals(new Dollor(5)));
+        assertFalse(new Dollor(5).equals(new Dollor(6)));
     }
 
 }
