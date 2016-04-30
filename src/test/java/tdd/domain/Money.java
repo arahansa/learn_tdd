@@ -14,11 +14,11 @@ public class Money {
         this.currency = currency;
     }
 
-    public static Dollor dollor(int amount) {
-        return new Dollor(amount, "USD");
+    public static Money dollor(int amount) {
+        return new Money(amount, "USD");
     }
-    public static Franc franc(int amount) {
-        return new Franc(amount, "CHF");
+    public static Money franc(int amount) {
+        return new Money(amount, "CHF");
     }
 
 
