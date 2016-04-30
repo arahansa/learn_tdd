@@ -2,6 +2,7 @@ package tdd;
 
 import tdd.domain.Dollor;
 import org.junit.Test;
+import tdd.domain.Franc;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
@@ -23,6 +24,13 @@ public class FirstTest {
     public void testEquality() throws Exception{
         assertTrue(new Dollor(5).equals(new Dollor(5)));
         assertFalse(new Dollor(5).equals(new Dollor(6)));
+    }
+
+    @Test
+    public void testFranchMultiplication(){
+        Franc five = new Franc(5);
+        assertEquals(new Franc(10), five.times(2));
+        assertEquals(new Franc(15), five.times(3));
     }
 
 }
