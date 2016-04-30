@@ -3,8 +3,8 @@ package tdd.domain;
 /**
  * Created by jarvis on 2016. 4. 29..
  */
-public class Dollor {
-    private int amount;
+public class Dollor extends Money{
+
 
     public Dollor(int amount){
         this.amount = amount;
@@ -14,10 +14,6 @@ public class Dollor {
         return new Dollor(amount * multiplier);
     }
 
-    @Override
-    public boolean equals(Object object){
-        Dollor dollor = (Dollor) object;
-        return amount == dollor.amount;
-    }
+
 
 }
