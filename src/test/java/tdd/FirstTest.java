@@ -1,7 +1,7 @@
 package tdd;
 
-import tdd.domain.Dollor;
 import org.junit.Test;
+import tdd.domain.Dollor;
 import tdd.domain.Franc;
 import tdd.domain.Money;
 
@@ -42,5 +42,13 @@ public class FirstTest {
         assertEquals("USD", Money.dollor(1).currency());
         assertEquals("CHF", Money.franc(1).currency());
     }
+
+
+    @Test
+    public void testDifferentClassEquality() throws Exception{
+        assertTrue(new Money(10, "CHF").equals(new Franc(10, "CHF")));
+        assertTrue(new Money(10, "USD").equals(new Dollor(10, "USD")));
+    }
+
 
 }

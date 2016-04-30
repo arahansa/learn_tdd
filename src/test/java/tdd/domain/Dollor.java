@@ -9,10 +9,4 @@ public class Dollor extends Money{
         super(amount, currency);
     }
 
-    public Dollor times(int multiplier){
-        return Money.dollor(amount * multiplier);
-    }
-
-
-
 }
