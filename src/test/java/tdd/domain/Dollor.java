@@ -4,7 +4,7 @@ package tdd.domain;
  * Created by jarvis on 2016. 4. 29..
  */
 public class Dollor {
-    public int amount;
+    private int amount;
 
     public Dollor(int amount){
         this.amount = amount;
