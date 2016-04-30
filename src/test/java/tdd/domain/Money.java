@@ -3,12 +3,12 @@ package tdd.domain;
 /**
  * Created by jarvis on 2016. 4. 30..
  */
-public class Money {
+public class Money implements Expression{
+    // 변수
     protected int amount;
     protected String currency;
 
-
-
+    // 생성자
     public Money(int amount, String currency){
         this.amount = amount;
         this.currency = currency;
@@ -21,7 +21,7 @@ public class Money {
         return new Money(amount, "CHF");
     }
 
-
+    // 일반 메서드
     public Money times(int multiplier){
         return new Money(amount * multiplier, currency);
     }
@@ -30,6 +30,11 @@ public class Money {
         return currency;
     }
 
+    public Expression plus(Money addend){
+        return new Money(amount + addend.amount, currency);
+    }
+
+    // 오버라이드 메서드
     @Override
     public boolean equals(Object object){
         Money money = (Money) object;
@@ -41,5 +46,6 @@ public class Money {
     public String toString(){
         return amount + " " + currency;
     }
+
 
 }
